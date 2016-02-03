@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Smart Bubbles Demo</title>
-  <meta name="description" content="Demo app for smart-bubbles" />
-  <link rel="stylesheet" type="text/css" href="bower_components/smart-button/style.css">
+  <title>FxOS TV Bubbles Demo</title>
+  <meta name="description" content="Demo app for fxos-tv-bubbles" />
+  <link rel="stylesheet" type="text/css" href="bower_components/fxos-tv-button/style.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <style type="text/css">
     html,
@@ -41,13 +41,13 @@
     function changeDirection() {
       var container = document.getElementById('main-container');
       var directionButton = document.getElementById('direction');
-      var direction = container.getAttribute('smart-bubbles-direction');
+      var direction = container.getAttribute('fxos-tv-bubbles-direction');
       if (!direction || direction === 'up') {
         directionButton.textContent = 'Down';
-        container.setAttribute('smart-bubbles-direction', 'down');
+        container.setAttribute('fxos-tv-bubbles-direction', 'down');
       } else {
         directionButton.textContent = 'Up';
-        container.removeAttribute('smart-bubbles-direction');
+        container.removeAttribute('fxos-tv-bubbles-direction');
       }
     }
 
@@ -62,20 +62,20 @@
     };
   </script>
   <script></script>
-  <script src="bower_components/smart-button/script.js" type="text/javascript"></script>
+  <script src="bower_components/fxos-tv-button/script.js" type="text/javascript"></script>
   <script src="script.js" type="text/javascript"></script>
 </head>
 <body role="application">
   <button type="button" onclick="play();">Play</button>
   <button type="button" onclick="stop();">Stop</button>
   <button id="direction" type="button" onclick="changeDirection();">Up</button>
-  <smart-bubbles id="test-target" interval="50">
-  </smart-bubbles>
-  <div id="main-container" smart-bubbles="true" smart-bubbles-direction="up">
-    <smart-button type="circle-text">Item 1</smart-button>
-    <smart-button type="circle-text">Item 2</smart-button>
-    <smart-button type="circle-text">Item 3</smart-button>
-    <smart-button type="circle-text">Item 4</smart-button>
+  <fxos-tv-bubbles id="test-target" interval="50">
+  </fxos-tv-bubbles>
+  <div id="main-container" fxos-tv-bubbles="true" fxos-tv-bubbles-direction="up">
+    <fxos-tv-button type="circle-text">Item 1</fxos-tv-button>
+    <fxos-tv-button type="circle-text">Item 2</fxos-tv-button>
+    <fxos-tv-button type="circle-text">Item 3</fxos-tv-button>
+    <fxos-tv-button type="circle-text">Item 4</fxos-tv-button>
   </div>
 
 </body>

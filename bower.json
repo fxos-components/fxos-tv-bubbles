@@ -1,7 +1,7 @@
 {
-  "name": "smart-bubbles",
+  "name": "fxos-tv-bubbles",
   "version": "0.0.0",
-  "homepage": "https://github.com/smart-components/smart-bubbles",
+  "homepage": "https://github.com/fxos-components/fxos-tv-bubbles",
   "main": "script.js",
   "license": "MPL",
   "ignore": [
@@ -17,6 +17,6 @@
     "package.json"
   ],
   "devDependencies": {
-    "smart-button": "smart-components/smart-button"
+    "fxos-tv-button": "fxos-components/fxos-tv-button"
   }
 }

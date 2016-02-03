@@ -1,5 +1,5 @@
 {
-  "name": "smart-bubbles",
+  "name": "fxos-tv-bubbles",
   "version": "1.0.0",
   "description": "A web component of displaying bubbling up or down animation",
   "main": "script.js",
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smart-components/smart-bubbles"
+    "url": "https://github.com/fxos-components/fxos-tv-bubbles"
   },
   "license": "MPL",
-  "homepage": "https://github.com/smart-components/smart-bubbles",
+  "homepage": "https://github.com/fxos-components/fxos-tv-bubbles",
   "devDependencies": {
     "browser-sync": "^2.7.1",
     "del": "^1.1.1",
