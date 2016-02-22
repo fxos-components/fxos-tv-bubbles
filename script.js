@@ -1,4 +1,4 @@
-window.SmartBubbles = (function(win) {
+window.FxosTvBubbles = (function(win) {
   'use strict';
 
   var DEFAULT_INTERVAL = 100;
@@ -21,18 +21,18 @@ window.SmartBubbles = (function(win) {
         if (this._targetAnimationCount === this._finishedAnimationCount) {
           this.playing = false;
           [].forEach.call(this._elements, function(elem) {
-            elem.classList.remove('smart-bubble-playing');
-            // XXX:Usually we use <smart-button> within container of
-            // smart-bubbles. If we remove style of smart-bubble-playing,
-            // Gecko would apply original style of smart-button instead and it
+            elem.classList.remove('fxos-tv-bubble-playing');
+            // XXX:Usually we use <fxos-tv-button> within container of
+            // fxos-tv-bubbles. If we remove style of fxos-tv-bubble-playing,
+            // Gecko would apply original style of fxos-tv-button instead and it
             // has transition property too. This results in another transition
-            // happens on <smart-button> while we thought we'd just stop
-            // animation. That is why we need to add 'smart-bubble-stopped' here
+            // happens on <fxos-tv-button> while we thought we'd just stop
+            // animation. That is why we need to add 'fxos-tv-bubble-stopped' here
             // to prevent unexpected animation from happening.
-            elem.classList.add('smart-bubble-stopped');
+            elem.classList.add('fxos-tv-bubble-stopped');
             // use getComputedStyle to force flushing re-style
             window.getComputedStyle(elem).animationName;
-            elem.classList.remove('smart-bubble-stopped');
+            elem.classList.remove('fxos-tv-bubble-stopped');
             window.getComputedStyle(elem).animationName;
             elem.style.animationDelay = '';
           }.bind(this));
@@ -54,7 +54,7 @@ window.SmartBubbles = (function(win) {
     [].forEach.call(elements, function(elem) {
       this._targetAnimationCount++;
       var delay = this._targetAnimationCount * interval / 1000;
-      elem.classList.add('smart-bubble-playing');
+      elem.classList.add('fxos-tv-bubble-playing');
       elem.style.animationDelay = delay + 's';
       elem.addEventListener('animationend', this);
     }.bind(this));
@@ -66,12 +66,12 @@ window.SmartBubbles = (function(win) {
       return;
     }
     [].forEach.call(this._elements, function(elem) {
-      elem.classList.remove('smart-bubble-playing');
-      elem.classList.add('smart-bubble-stopped');
+      elem.classList.remove('fxos-tv-bubble-playing');
+      elem.classList.add('fxos-tv-bubble-stopped');
       elem.removeEventListener('animationend', this);
       // use getComputedStyle to force flushing re-style
       window.getComputedStyle(elem).animationName;
-      elem.classList.remove('smart-bubble-stopped');
+      elem.classList.remove('fxos-tv-bubble-stopped');
     }.bind(this));
     this._elements = null;
     this.playing = false;
@@ -79,5 +79,5 @@ window.SmartBubbles = (function(win) {
   };
 
   // Register and return the constructor
-  return document.registerElement('smart-bubbles', { prototype: proto });
+  return document.registerElement('fxos-tv-bubbles', { prototype: proto });
 })(window);

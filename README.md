@@ -1,4 +1,4 @@
-# smart-bubbles
+# fxos-tv-bubbles
 A web component of displaying bubbling up or down animation
 
 
@@ -18,12 +18,12 @@ A web component of displaying bubbling up or down animation
 
 ## Usage
 
-1. Install smart-bubbles in your project
+1. Install fxos-tv-bubbles in your project
 
     ```sh
-    $ bower install --save smart-components/smart-bubbles
+    $ bower install --save fxos-components/fxos-tv-bubbles
     ```
-2. See [examples/](https://github.com/smart-components/smart-bubbles/tree/master/examples) for usage
+2. See [examples/](https://github.com/fxos-components/fxos-tv-bubbles/tree/master/examples) for usage
 
 
 ## Build

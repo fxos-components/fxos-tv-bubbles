@@ -1,14 +1,14 @@
-*[smart-bubbles="true"] .smart-bubble-playing {
+*[fxos-tv-bubbles="true"] .fxos-tv-bubble-playing {
   transition-property: none;
   transform: none;
   animation: bubble-animation 0.5s cubic-bezier(0.25, 0, 0, 1) both;
 }
 
-*[smart-bubbles="true"][smart-bubbles-direction="down"] .smart-bubble-playing {
+*[fxos-tv-bubbles="true"][fxos-tv-bubbles-direction="down"] .fxos-tv-bubble-playing {
   animation: sinking-animation 0.5s cubic-bezier(0.25, 0, 0, 1) both;
 }
 
-*[smart-bubbles="true"] .smart-bubble-stopped {
+*[fxos-tv-bubbles="true"] .fxos-tv-bubble-stopped {
   transition-property: none;
   transform: none;
   animation: none;
